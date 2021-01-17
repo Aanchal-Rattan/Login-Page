@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="login.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="login.js"> </script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+</head>
+
+<body>
+
+
+  <!-- <div class="show-login-btn"><i class="fas fa-sign-in-alt"></i> Show Login Form</div> -->
+  <form class="box" action="login.html" method="POST">
+
+    <h1 class="font">
+      LOGIN
+    </h1>
+    <input type="text" name="" placeholder="Enter Username" id="username">
+    <input type="password" name="" placeholder="Enter Password" id="password">
+    <input type="submit" name="" value="LOGIN" onclick="validate()">
+    <div class="bottom-text ">
+      Don't have an account?
+      <a class="show-login" style="color: #9903fdee;" href="#"> Sign up </a>
+    </div>
+
+  </form>
+
+  <div class="login-box">
+    <div class="hide-login-btn"><i class="fas fa-times"></i></div>
+    <form class="login-form box" action="index.html" method="post">
+
+      <h1 class="font">Sign Up</h1>
+      <input class="txtb" type="text" name="" placeholder="Enter Username" required>
+      <input class="txtb" type="email" name="" placeholder="Enter email id" required>
+      <input class="txtb" type="password" name="" placeholder="Enter password" required>
+      <input class="login-btn" type="submit" name="" value="CREATE ">
+    </form>
+  </div>
+
+
+  <script type="text/javascript">
+    $(".show-login").on("click", function () {
+      $(".login-box").toggleClass("showed");
+    });
+    $(".hide-login-btn").on("click", function () {
+      $(".login-box").toggleClass("showed");
+    });
+  </script>
+
+</body>
+
+</html>
